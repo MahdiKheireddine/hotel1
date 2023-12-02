@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+
+        <ul class="nav-menu">
+          <li> <a href="#hoome" class="nav-link">Acceuil</a> </li>
+          <li> <a href="#rooms" class="nav-link">Chambre</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Paradise Palace</h1>
+          <p>Dans un cadre paradisiaque en bord de mer avec une plage à couper le souffle,on vous offre ici des vacances inoubliables. On connaît bien nos clients : des voyageurs qui cherchent à fuir le stress de la ville pour une escapade détente au paradis. </p>
+          <button><a href="RI.pdf" download="Réglement Interrieur.txt">Télecharger</a></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="acceuil photo" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="acceuil photo" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="acceuil photo" class="slide" onclick="img('image/home3.jpg')">
+        
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+
+
+  <section class="about top prop" id="hoome">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Le comfort au plus haut niveau</h5>
+          <h2>Bienvenu au Paradise Palace</h2>
+          <p>Situé à proximité d'une route de campagne, sur un domaine luxuriant, cet hôtel luxueux se trouve à 10 km du palais de la Bahia, qui date du XIXe siècle, et à 16 km de l'aéroport de
+Marrakech-Ménara. </p>
+          <p>Dotées d'un plafond à caissons et d'une salle de bain en marbre, les suites claires et luxueuses disposent d'une terrasse, d'une cheminée et d'un coin salon. Les villas comportent en outre une piscine privée. Tous les hébergements sont équipés de la télévision par satellite, du Wi-Fi gratuit, d'un minibar et d'une machine Nespresso. Certains sont pourvus d'une baignoire sur pieds.</p>
+          <p>L'établissement comprend une piscine extérieure, 2 restaurants, 2 bars et un jardin. Il possède également un spa avec sauna, hammam et centre de remise en forme. Le petit-déjeuner et la navette aéroport sont payants. Les enfants de 12 ans et plus sont les bienvenus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Nos services</h2>
+        <p>Cet hôtel dispose de plusieurs services qui conviennent comme aux petits comme aux grands, qui sont: </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Piscine</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yoga</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Croisière (en extra)</span>
+          </div>
+          
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Salle de conférence</span>
+          </div>
+      
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Plage privée</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="room top" id="rooms">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Le luxe dans chaque détail</h5>
+          <h2>Chambres & Suites</h2>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg">
+          </div>
+          <div class="text">
+            <h3>Chambres standards</h3>
+            <p> <span>$</span>200 <span>/par nuit</span> </p>
+		<button  ><a href="">RESERVEZ</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" >
+          </div>
+          <div class="text">
+            <h3>Suites</h3>
+            <p> <span>$</span>250 <span>/par nuit</span> </p>
+		<button><a href="">RESERVEZ</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" >
+          </div>
+          <div class="text">
+            <h3>Suites Présidentielles</h3>
+            <p> <span>$</span>300 <span>/par nuit</span> </p>
+		<button><a href="">RESERVEZ</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container grid top" id="contact">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> L'hôtel exige le paiement sur place dés l'arrivée, et accepte les moyens suivants: (cash, Paypal, VisaCard, MasterCard ... )</p>
+
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Information</h3>
+
+        <ul>
+          <li>Notre hôtel est fondé en 2020</li>
+          <li>Une vue panoramique unique.</li>
+          <li>Le mieux noté et certifié TripAdvisor</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contactez nous</h3>
+
+        <ul>
+          <li>10, rue mala. Oran,Algérie</li>
+          <li><i class="far fa-envelope"></i><a href="mailto:paradisepalace@gmail.com">paradisepalace@gmail.com </a> </li>
+          <li><i class="far fa-phone-alt"></i><a href="tel:213 514324172">+213 514324172 </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
